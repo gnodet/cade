@@ -43,7 +43,29 @@
         <pax.exam.version>1.2.1</pax.exam.version>
         <pax.tinybundles.version>1.2.0</pax.tinybundles.version>
     </properties>
-
+    
+    <distributionManagement>
+      <repository>
+        <id>release.fusesource.org</id>
+        <name>Cade Release Repository</name>
+        <url>dav:http://fusesource.com/forge/dav/cade/repo/release</url>
+      </repository>
+      <snapshotRepository>
+        <uniqueVersion>false</uniqueVersion>
+        <id>snapshot.fusesource.org</id>
+        <name>Cade Snapshot Repository</name>
+        <url>dav:http://fusesource.com/forge/dav/cade/repo/snapshot</url>
+      </snapshotRepository>
+      <site>
+        <id>website.fusesource.org</id>
+        <name>website</name>
+<!--
+        <url>dav:http://fusesource.com/forge/dav/cade/versions/snapshot</url>
+-->
+        <!-- TODO change me ASAP!!! -->
+        <url>dav:http://fusesource.com/forge/dav/remoteobr</url>
+      </site>
+    </distributionManagement>
     <dependencyManagement>
         <dependencies>
             <dependency>
