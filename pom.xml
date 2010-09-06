@@ -35,6 +35,7 @@
         <module>cade-core</module>
         <module>cade-bundle</module>
         <module>cade-itests</module>
+        <module>cade-website</module>
     </modules>
 
     <properties>
