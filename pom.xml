@@ -63,7 +63,7 @@
         <url>dav:http://fusesource.com/forge/dav/cade/versions/snapshot</url>
 -->
         <!-- TODO change me ASAP!!! -->
-        <url>dav:http://fusesource.com/forge/dav/remoteobr</url>
+        <url>dav:http://fusesource.com/forge/dav/cade</url>
       </site>
     </distributionManagement>
     <dependencyManagement>
