@@ -23,6 +23,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
+    <parent>
+      <groupId>org.fusesource</groupId>
+      <artifactId>fusesource-pom</artifactId>
+      <version>1.0</version>
+    </parent>
 
     <groupId>org.fusesource.cade</groupId>
     <artifactId>cade</artifactId>
@@ -42,30 +47,27 @@
         <osgi.version>4.2.0</osgi.version>
         <pax.exam.version>1.2.1</pax.exam.version>
         <pax.tinybundles.version>1.2.0</pax.tinybundles.version>
+
+        <forge-project-id>cade</forge-project-id>
+        <release-altGitURL>scm:git:ssh://git@github.com:gnodet/cade.git</release-altGitURL>
     </properties>
     
+    <url>http://${forge-project-id}.fusesource.com/maven/${project.version}</url>
+
+    <scm>
+      <connection>scm:git:git://github.com/gnodet/cade.git</connection>
+      <!-- Work around for issue: http://jira.codehaus.org/browse/SCM-444 -->
+      <developerConnection>${release-altGitURL}</developerConnection>
+      <url>http://github.com/gnodet/cade/tree/master</url>
+    </scm>
     <distributionManagement>
-      <repository>
-        <id>release.fusesource.org</id>
-        <name>Cade Release Repository</name>
-        <url>dav:http://fusesource.com/forge/dav/cade/repo/release</url>
-      </repository>
-      <snapshotRepository>
-        <uniqueVersion>false</uniqueVersion>
-        <id>snapshot.fusesource.org</id>
-        <name>Cade Snapshot Repository</name>
-        <url>dav:http://fusesource.com/forge/dav/cade/repo/snapshot</url>
-      </snapshotRepository>
       <site>
         <id>website.fusesource.org</id>
         <name>website</name>
-<!--
-        <url>dav:http://fusesource.com/forge/dav/cade/versions/snapshot</url>
--->
-        <!-- TODO change me ASAP!!! -->
-        <url>dav:http://fusesource.com/forge/dav/cade</url>
+        <url>dav:http://fusesource.com/forge/dav/${forge-project-id}/maven/${project.version}</url>
       </site>
     </distributionManagement>
+
     <dependencyManagement>
         <dependencies>
             <dependency>

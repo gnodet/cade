@@ -55,13 +55,27 @@
     #navigation
       .wrapper
         %ul
-          - if (requestURI == "/")
+          - if (requestUri == "/")
             %li
               %span Home
           - else
             %li
               %a(href={uri("/")}) 
                 Home
+          - if (requestUri == "/source")
+            %li
+              %span Source
+          - else
+            %li
+              %a(href={uri("/source")}) 
+                Source
+          - if (requestUri == "/building")
+            %li
+              %span Building
+          - else
+            %li
+              %a(href={uri("/building")}) 
+                Building
 
     #content
       .wrapper
